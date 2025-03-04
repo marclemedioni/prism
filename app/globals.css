@@ -1,0 +1,52 @@
+@import 'tailwindcss';
+
+@theme {
+  --color-black: #111111;
+  --color-white: #eeeee1;
+}
+
+/*
+  The default border color has changed to `currentColor` in Tailwind CSS v4,
+  so we've added these compatibility styles to make sure everything still
+  looks the same as it did with Tailwind CSS v3.
+
+  If we ever want to remove these styles, we need to add an explicit border
+  color utility to any element that depends on these defaults.
+*/
+@layer base {
+  *,
+  ::after,
+  ::before,
+  ::backdrop,
+  ::file-selector-button {
+    border-color: var(--color-gray-200, currentColor);
+  }
+}
+
+:root {
+  --nav-height: 50px;
+
+  --black: #111111;
+  --white: #EEEEE1;
+}
+
+html,
+body {
+  @apply w-screen overflow-x-hidden;
+}
+
+nav {
+  height: var(--nav-height);
+}
+
+main {
+  min-height: calc(100vh - var(--nav-height));
+}
+
+button {
+  @apply bg-white text-black px-4 py-1 rounded-xs;
+}
+
+input {
+  @apply text-black px-2 py-1 rounded-xs;
+}
