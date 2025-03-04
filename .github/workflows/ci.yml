@@ -69,8 +69,11 @@ jobs:
       - name: Lint
         run: npm run lint
 
+      - name: Generate Encore files
+        run: npm run gen
+
       - name: Type check
-        run: npx tsc --noEmit -p tsconfig.json
+        run: npx tsc --noEmit
 
       - name: Check for vulnerabilities
         run: npm audit
