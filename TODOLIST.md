@@ -19,10 +19,10 @@ Ce document liste l'ensemble des tâches à accomplir pour le développement de 
     - [x] Mise en place des tests dans CI
     - [x] Configuration de la couverture de code
     - [x] Configuration de l'environnement ESM
-  - [ ] Configuration des hooks de pre-commit
-    - [ ] Installation et configuration de Husky
-    - [ ] Configuration de lint-staged
-    - [ ] Configuration de commitlint
+  - [x] Configuration des hooks de pre-commit
+    - [x] Installation et configuration de Husky
+    - [x] Configuration de lint-staged
+    - [x] Configuration de commitlint
   - [ ] Configuration du déploiement
     - [ ] Configuration du déploiement de staging
     - [ ] Configuration du déploiement de production
