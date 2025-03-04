@@ -13,11 +13,12 @@ Ce document liste l'ensemble des tâches à accomplir pour le développement de 
     - [x] Configuration du cache des dépendances
   - [x] Configuration des vérifications de code
     - [x] Mise en place des tests de lint dans CI
-  - [ ] Configuration des tests automatisés
-    - [ ] Installation et configuration de Vitest
-    - [ ] Configuration des tests e2e avec Playwright
-    - [ ] Mise en place des tests dans CI
-    - [ ] Configuration de la couverture de code
+  - [x] Configuration des tests automatisés
+    - [x] Installation et configuration de Vitest
+    - [x] Configuration des tests e2e avec Playwright
+    - [x] Mise en place des tests dans CI
+    - [x] Configuration de la couverture de code
+    - [x] Configuration de l'environnement ESM
   - [ ] Configuration des hooks de pre-commit
     - [ ] Installation et configuration de Husky
     - [ ] Configuration de lint-staged
