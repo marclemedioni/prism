@@ -1,5 +1,5 @@
 {
-	"id":   "arcandoc-tw92",
+	"id":   "prism-tw92",
 	"lang": "typescript",
 	"build": {
 		"docker": {

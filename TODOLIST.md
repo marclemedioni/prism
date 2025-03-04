@@ -23,16 +23,16 @@ Ce document liste l'ensemble des tâches à accomplir pour le développement de 
     - [x] Installation et configuration de Husky
     - [x] Configuration de lint-staged
     - [x] Configuration de commitlint
-  - [ ] Configuration du déploiement
-    - [ ] Configuration du déploiement de staging
-    - [ ] Configuration du déploiement de production
-    - [ ] Mise en place des secrets dans GitHub
+  - [x] Configuration du déploiement
+    - [x] Configuration du déploiement de staging
+    - [x] Configuration du déploiement de production
+    - [x] Mise en place des secrets dans GitHub
 - [ ] Conception de l'architecture globale de l'application
 
-  - [ ] Création de la structure des dossiers
-    - [ ] Configuration de la structure backend
-    - [ ] Configuration de la structure frontend
-    - [ ] Configuration des dossiers partagés
+  - [x] Création de la structure des dossiers
+    - [x] Configuration de la structure backend
+    - [x] Configuration de la structure frontend
+    - [x] Configuration des dossiers partagés
   - [ ] Configuration de base du projet
     - [ ] Installation des dépendances de base
     - [ ] Configuration de TypeScript

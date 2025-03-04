@@ -1,20 +1,5 @@
-import { APIError, Gateway, Header, api } from "encore.dev/api";
+import { APIError, Gateway, Header } from "encore.dev/api";
 import { authHandler } from "encore.dev/auth";
-
-interface LoginParams {
-  email: string;
-  password: string;
-}
-
-export const login = api(
-  { expose: true, auth: false, method: "GET", path: "/login" },
-  async (params: LoginParams): Promise<{ token: string }> => {
-    // ... get the userID from database or third party service like Auth0 or Clerk ...
-    // ... create and sign a token ...
-
-    return { token: "dummy-token" };
-  }
-);
 
 interface AuthParams {
   authorization: Header<"Authorization">;
@@ -27,9 +12,6 @@ export const myAuthHandler = authHandler(
     // ... verify and decode token to get the userID ...
     // ... get user info from database or third party service like Auth0 or Clerk ...
 
-    if (!params.authorization) {
-      throw APIError.unauthenticated("no token provided");
-    }
     if (params.authorization !== "dummy-token") {
       throw APIError.unauthenticated("invalid token");
     }
