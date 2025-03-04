@@ -15,11 +15,7 @@ const navLinks = [
   { href: "/admin", label: "Admin Dashboard" },
 ];
 
-export default async function RootLayout({
-  children,
-}: {
-  children: React.ReactNode;
-}) {
+export default async function RootLayout({ children }: { children: React.ReactNode }) {
   const cookieStore = await cookies();
   const isLoggedIn = cookieStore.has("auth-token");
 
@@ -30,11 +26,7 @@ export default async function RootLayout({
           <nav className="h-navBar bg-black text-white flex items-center justify-between p-5">
             <div className="flex items-center">
               {navLinks.map(({ href, label }) => (
-                <Link
-                  className="mr-8 text-inherit hover:underline"
-                  key={href}
-                  href={href}
-                >
+                <Link className="mr-8 text-inherit hover:underline" key={href} href={href}>
                   {label}
                 </Link>
               ))}

@@ -14,8 +14,7 @@ export default async function Admin() {
   }
 
   if (error) {
-    if (error.code === ErrCode.Unauthenticated)
-      redirect("/auth/unauthenticated?from=%2Fadmin");
+    if (error.code === ErrCode.Unauthenticated) redirect("/auth/unauthenticated?from=%2Fadmin");
     else throw error;
   }
 

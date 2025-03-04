@@ -123,9 +123,7 @@ export namespace api {
 function encodeQuery(parts: Record<string, string | string[]>): string {
   const pairs: string[] = [];
   for (const key in parts) {
-    const val = (
-      Array.isArray(parts[key]) ? parts[key] : [parts[key]]
-    ) as string[];
+    const val = (Array.isArray(parts[key]) ? parts[key] : [parts[key]]) as string[];
     for (const v of val) {
       pairs.push(`${key}=${encodeURIComponent(v)}`);
     }
@@ -137,7 +135,7 @@ function encodeQuery(parts: Record<string, string | string[]>): string {
 // and returns the same record with a narrower type.
 // @ts-ignore - TS ignore because makeRecord is not always used
 function makeRecord<K extends string | number | symbol, V>(
-  record: Record<K, V | undefined>,
+  record: Record<K, V | undefined>
 ): Record<K, V> {
   for (const key in record) {
     if (record[key] === undefined) {
@@ -194,17 +192,11 @@ class WebSocketConnection {
     });
   }
 
-  on(
-    type: "error" | "close" | "message" | "open",
-    handler: (event: any) => void,
-  ) {
+  on(type: "error" | "close" | "message" | "open", handler: (event: any) => void) {
     this.ws.addEventListener(type, handler);
   }
 
-  off(
-    type: "error" | "close" | "message" | "open",
-    handler: (event: any) => void,
-  ) {
+  off(type: "error" | "close" | "message" | "open", handler: (event: any) => void) {
     this.ws.removeEventListener(type, handler);
   }
 
@@ -361,8 +353,7 @@ class BaseClient {
     // Add User-Agent header if the script is running in the server
     // because browsers do not allow setting User-Agent headers to requests
     if (typeof window === "undefined") {
-      this.headers["User-Agent"] =
-        "arcandoc-tw92-Generated-TS-Client (Encore/v1.43.7)";
+      this.headers["User-Agent"] = "arcandoc-tw92-Generated-TS-Client (Encore/v1.43.7)";
     }
 
     this.requestInit = options.requestInit ?? {};
@@ -414,7 +405,7 @@ class BaseClient {
   // createStreamInOut sets up a stream to a streaming API endpoint.
   async createStreamInOut<Request, Response>(
     path: string,
-    params?: CallParameters,
+    params?: CallParameters
   ): Promise<StreamInOut<Request, Response>> {
     let { query, headers } = params ?? {};
 
@@ -438,7 +429,7 @@ class BaseClient {
   // createStreamIn sets up a stream to a streaming API endpoint.
   async createStreamIn<Response>(
     path: string,
-    params?: CallParameters,
+    params?: CallParameters
   ): Promise<StreamIn<Response>> {
     let { query, headers } = params ?? {};
 
@@ -462,7 +453,7 @@ class BaseClient {
   // createStreamOut sets up a stream to a streaming API endpoint.
   async createStreamOut<Request, Response>(
     path: string,
-    params?: CallParameters,
+    params?: CallParameters
   ): Promise<StreamOut<Request, Response>> {
     let { query, headers } = params ?? {};
 
@@ -488,7 +479,7 @@ class BaseClient {
     method: string,
     path: string,
     body?: BodyInit,
-    params?: CallParameters,
+    params?: CallParameters
   ): Promise<Response> {
     let { query, headers, ...rest } = params ?? {};
     const init = {
@@ -516,10 +507,7 @@ class BaseClient {
 
     // Make the actual request
     const queryString = query ? "?" + encodeQuery(query) : "";
-    const response = await this.fetcher(
-      this.baseURL + path + queryString,
-      init,
-    );
+    const response = await this.fetcher(this.baseURL + path + queryString, init);
 
     // handle any error responses
     if (!response.ok) {
@@ -570,9 +558,7 @@ function isAPIErrorResponse(err: any): err is APIErrorResponse {
     err !== null &&
     isErrCode(err.code) &&
     typeof err.message === "string" &&
-    (err.details === undefined ||
-      err.details === null ||
-      typeof err.details === "object")
+    (err.details === undefined || err.details === null || typeof err.details === "object")
   );
 }
 

@@ -1,4 +1,4 @@
-import {FC} from "react";
+import { FC } from "react";
 
 export default async function Home() {
   return (
@@ -34,9 +34,17 @@ export default async function Home() {
   );
 }
 
-const Card: FC<{ href: string; heading: string; desc: string }> = ({href, heading, desc}) => {
-  return <a href={href} className="group p-4 bg-white bg-opacity-0 transition hover:bg-black hover:bg-opacity-5" target="_blank">
-    <h2 className="mb-2 font-semibold">{heading} <span className="inline-block transition group-hover:translate-x-2">-&gt;</span></h2>
-    <p className="opacity-60">{desc}</p>
-  </a>
-}
+const Card: FC<{ href: string; heading: string; desc: string }> = ({ href, heading, desc }) => {
+  return (
+    <a
+      href={href}
+      className="group p-4 bg-white bg-opacity-0 transition hover:bg-black hover:bg-opacity-5"
+      target="_blank"
+    >
+      <h2 className="mb-2 font-semibold">
+        {heading} <span className="inline-block transition group-hover:translate-x-2">-&gt;</span>
+      </h2>
+      <p className="opacity-60">{desc}</p>
+    </a>
+  );
+};
