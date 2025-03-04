@@ -7,10 +7,10 @@ Ce document liste l'ensemble des tâches à accomplir pour le développement de 
 ### Semaines 1-2: Configuration et architecture initiale
 
 - [ ] Mise en place de l'intégration continue (CI/CD)
-  - [ ] Configuration initiale de GitHub Actions
-    - [ ] Création du workflow de base
-    - [ ] Configuration du déclenchement sur push et PR
-    - [ ] Configuration du cache des dépendances
+  - [x] Configuration initiale de GitHub Actions
+    - [x] Création du workflow de base
+    - [x] Configuration du déclenchement sur push et PR
+    - [x] Configuration du cache des dépendances
   - [ ] Configuration des vérifications de code
     - [ ] Installation et configuration d'ESLint
     - [ ] Installation et configuration de Prettier
