@@ -12,7 +12,7 @@
     "gen": "encore gen client --output=./app/lib/client.ts --env=local",
     "format": "prettier --write \"**/*.{ts,tsx,js,jsx,json,md,yml}\"",
     "format:check": "prettier --check \"**/*.{ts,tsx,js,jsx,json,md,yml}\"",
-    "test": "vitest",
+    "test": "vitest run",
     "test:ui": "vitest --ui",
     "test:coverage": "vitest run --coverage",
     "test:ci": "vitest run",
@@ -32,7 +32,8 @@
     ]
   },
   "dependencies": {
-    "encore.dev": "^1.46.5",
+    "bcrypt": "^5.1.1",
+    "encore.dev": "^1.46.6",
     "next": "^15.0.2",
     "react": "^18",
     "react-dom": "^18"
@@ -43,6 +44,7 @@
     "@playwright/test": "^1.50.1",
     "@tailwindcss/postcss": "^4.0.9",
     "@testing-library/react": "^14.2.1",
+    "@types/bcrypt": "^5.0.2",
     "@types/node": "^20",
     "@types/react": "^18",
     "@types/react-dom": "^18",

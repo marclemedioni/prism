@@ -1,0 +1,6 @@
+---
+description: Comments should always be in english
+globs: 
+alwaysApply: true
+---
+All comments should be in english, only ui text visible to user should be in french.
